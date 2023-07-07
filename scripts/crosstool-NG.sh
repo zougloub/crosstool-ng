@@ -105,6 +105,7 @@ for d in            \
 done
 
 n_open_files=$(ulimit -n)
+n_open_files=2048
 if [ "${n_open_files}" -lt 2048 ]; then
     # Newer ld seems to keep a lot of open file descriptors, hitting the default limit
     # (1024) for example during uClibc-ng link.
